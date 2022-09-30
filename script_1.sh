@@ -63,7 +63,6 @@ echo -ne "
 "
 # Mount to main drive
 cp script_2.sh /mnt/script_2.sh
-arch-chroot /mnt /bin/bash 'sh -c script_2.sh'
 echo "
   Run this command: arch-chroot /mnt /bin/bash
 "
