@@ -22,7 +22,7 @@ pacman -Syu --needed --noconfirm networkmanager grub
 systemctl enable NetworkManager
 grub-install /dev/nvme0n1
 # Update GRUB
-grub mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 echo -ne "
 -------------------------------------------------------------------------
@@ -53,7 +53,8 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # Create user called "user"
-useradd -m -G wheel video user
+useradd -m -G wheel user
+usermod -a -G video user
 # Prompt to create password - actual password not written in script for security purposes
 read -p "Enter password: " -s password
 $password | passwd user
@@ -176,18 +177,6 @@ paru -S --needed --noconfirm \
 	zsh \
 	zsh-completions \
 	zsh-syntax-highlighting \
-
-echo -ne "
--------------------------------------------------------------------------
-                    Allow Printing
--------------------------------------------------------------------------
-"
-systemctl start --now cups
-systemctl start --now cups.socket
-systemctl start --now cups.path
-systemctl enable --now cups
-systemctl enable --now cups.socket
-systemctl enable --now cups.path
 
 echo -ne "
 -------------------------------------------------------------------------
