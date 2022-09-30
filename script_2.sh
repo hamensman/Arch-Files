@@ -18,7 +18,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # Install GRUB on drive
-pacman -Syu --needed --noconfirm networkmanager grub git
+pacman -Syu --needed --noconfirm networkmanager grub
 systemctl enable NetworkManager
 grub-install /dev/nvme0n1
 # Update GRUB
@@ -53,7 +53,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # Create user called "user"
-useradd -m -g wheel video user
+useradd -m -G wheel video user
 # Prompt to create password - actual password not written in script for security purposes
 read -p "Enter password: " -s password
 $password | passwd user
