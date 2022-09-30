@@ -61,6 +61,5 @@ echo -ne "
                     Move from USB to Main Drive - Moving to Part 2!
 -------------------------------------------------------------------------
 "
-# Mount to main drive
+# Copy second script to main drive
 cp script_2.sh /mnt/script_2.sh
-arch-chroot /mnt /bin/bash 'sh -c script_2.sh'
