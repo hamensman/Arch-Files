@@ -35,9 +35,9 @@ echo -ne "
 "
 mkfs.ext4 /dev/nvme0n1p1
 mkfs.ext4 /dev/nvme0n1p2
-mount /dev/nvme0n1p12 /mnt
+mount /dev/nvme0n1p2 /mnt
 mkdir /mnt/boot
-mount /dev/nvme0n1p11 /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
 
 echo -ne "
 -------------------------------------------------------------------------
