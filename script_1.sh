@@ -26,7 +26,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # Automate fdisk prompts - creates a 128M boot partition as nvme0n1p1 and the remaining space as a linux filesystem partition as nvme0n1p2
-printf "o\nn\n\n1\n\n+128M\nn\n\n2\n\n\na\n1\nw\n" | fdisk /dev/nvme0n1p1
+printf "o\nn\n\n1\n\n+128M\nn\n\n2\n\n\na\n1\nw\n" | fdisk /dev/nvme0n1
 
 echo -ne "
 -------------------------------------------------------------------------
