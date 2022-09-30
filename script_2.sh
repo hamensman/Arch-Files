@@ -71,7 +71,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 
-paru -S --needed --noconfirm \
+pacman -S --needed --noconfirm \
 	acpi \
 	alsa-utils \
 	arandr \
