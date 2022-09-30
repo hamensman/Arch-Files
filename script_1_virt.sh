@@ -67,5 +67,5 @@ echo "
   Run this command: arch-chroot /mnt /bin/bash
 "
 echo "
-  Then this command: sh script_2.sh
+  Then this command: sh script_2_virt.sh
 "
